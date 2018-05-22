@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Objective
+* Perform full CRUD for 1 resource
+* Understand Form Helpers
 
-Things you may want to cover:
+### Already Completed
+* rails new brew-crew
+* rails g model Brew blend_name origin notes strength:integer
+* added 'faker' gem to Gemfile
+* created seed data
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### Deliverables
+* route for '/brews' that displays all of your coffees as links to their show pages
+* route to create a new brew
+* route to edit a new brew
+* route to '/brews/strongest' find the brews with the highest strength
