@@ -1,4 +1,11 @@
-<p> <%= @brew.blend_name %> </p>
+<h1> <%= @brew.blend_name %> </h1>
 <p> <%= @brew.origin %> </p>
 <p> <%= @brew.notes %> </p>
 <p> <%= @brew.strength %> </p>
+
+<h4> Customers who have enjoyed this brew </h4>
+<ul>
+<% @brew.customers.each do |customer| %>
+  <li> <%= link_to customer.name, customer_path(customer) %> </li>
+<% end %>
+</ul>

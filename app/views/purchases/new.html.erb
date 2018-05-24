@@ -1,0 +1,28 @@
+<%= flash[:errors] %>
+
+
+<%= form_for @purchase do |f| %>
+
+  <%= f.label :customer_name %>
+  <%= f.text_field :customer_name %>
+
+  <%= f.label :creamer_strength %>
+  <%= f.text_field :creamer_strength %>
+
+  <%= f.label :iced, "Iced", :value => "true"  %>
+   <%= f.radio_button :iced, true, :checked => true %>
+   <%= f.label :iced, "Hot", :value => "false" %>
+   <%= f.radio_button :iced, false %>
+
+   <%= f.label :size %>
+   <%= f.text_field :size %>
+
+  <%= f.label :special_instructions%>
+  <%= f.text_area :special_instructions%>
+
+  <%= f.collection_select :brew_id, Brew.all, :id, :blend_name %>
+
+  <%= f.submit %>
+
+
+<% end %>

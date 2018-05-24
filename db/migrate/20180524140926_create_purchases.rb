@@ -6,6 +6,8 @@ class CreatePurchases < ActiveRecord::Migration[5.1]
       t.boolean :iced
       t.string :special_instructions
       t.string :size
+      t.integer :customer_id
+      t.integer :brew_id
 
       t.timestamps
     end
