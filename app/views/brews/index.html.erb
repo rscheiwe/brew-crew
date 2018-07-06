@@ -1,0 +1,9 @@
+<h2>List of Blends</h2>
+
+<% @brews.each do |brew| %>
+<%= link_to brew.blend_name, brew_path(brew) %><br>
+<%end%>
+<br>
+<hr>
+<center><%= link_to "Create a Blend", new_brew_path %></center>
+<center><%= link_to "Index of Blends", brews_path %> | <%= link_to "Index of Customers", customers_path %></center>

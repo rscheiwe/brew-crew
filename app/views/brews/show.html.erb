@@ -1,0 +1,9 @@
+<h2>Profile Page for <i><%= @brew.blend_name %></i></h2>
+
+<h4 style="margin-left:20px"><i>Blend Name:</i> <%= @brew.blend_name %></h4>
+<h4 style="margin-left:20px"><i>Origin:</i> <%= @brew.origin%></h4>
+<h4 style="margin-left:20px"><i>Notes:</i> <%= @brew.notes %></h4>
+<h4 style="margin-left:20px"><i>Strength:</i> <%= @brew.strength %></h4>
+
+<hr>
+<center><%= link_to "Index of Blends", brews_path %> | <%= link_to "Index of Customers", customers_path %></center>

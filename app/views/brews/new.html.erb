@@ -1,0 +1,34 @@
+<h2>Create a New Purchase</h2>
+
+<%= form_for(@brew) do |f| %>
+
+  <% if @brew.errors.any? %>
+    <div id="error_explanation">
+      <h3 style="margin-left: 20px"><font color="red">There were some errors:</font></h3>
+
+      <ul>
+        <% @brew.errors.full_messages.each do |message| %>
+        <font color="red"><li><%= message %></li></font>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <%= f.label :blend_name, "Blend Name: " %>
+  <%= f.text_field :blend_name %>
+  <br>
+  <br>
+  <%= f.label :brew_id, "Country of Origin: " %>
+  <%= f.text_field :origin %>
+  <br>
+  <%= f.label :notes, "Particular Notes: " %>
+  <%= f.text_field :notes %>
+  <br>
+  <%= f.label :strength, "Please Select Strength: " %>
+  <%= f.select :strength, (1..5) %>
+  <br>
+  <%= f.submit  %>
+<% end %>
+<br>
+<hr>
+<center><%= link_to "Index of Blends", brews_path %> | <%= link_to "Index of Customers", customers_path %></center>

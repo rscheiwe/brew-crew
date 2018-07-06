@@ -1,0 +1,15 @@
+<h2>Create a New Purchase</h2>
+
+<%= form_for(@purchase) do |f| %>
+  <%= f.label :customer_name, "Your Name: " %>
+  <%= f.text_field :customer_name %>
+  <br>
+  <br>
+  <%= f.label :brew_id, "Please Select Your Blend: " %>
+  <%= f.collection_select :brew_id, Brew.all, :id, :blend_name %>
+  <br>
+  <%= f.submit  %>
+<% end %>
+<br>
+<hr>
+<center><%= link_to "Index of Blends", brews_path %> | <%= link_to "Index of Customers", customers_path %></center>

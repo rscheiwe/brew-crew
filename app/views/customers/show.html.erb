@@ -1,0 +1,12 @@
+<h2>Profile Page for <i><%= @customer.name %></i></h2>
+
+<h3 style="margin-left:20px"><i>Customer Name:</i> <%= @customer.name %></h4>
+<h3 style="margin-left:20px"><i>Purchased Blends: </i></h3>
+<ul><% @customer.brews.each do |brew| %>
+  <li><h4 style="margin-left:10px"><%= brew.blend_name %></h4></li>
+<%end%></ul>
+
+
+<hr>
+<center><%= link_to "Purchas a New Blend", new_purchase_path %></center>
+<center><%= link_to "Index of Blends", brews_path %> | <%= link_to "Index of Customers", customers_path %></center>
